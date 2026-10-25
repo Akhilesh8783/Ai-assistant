@@ -1,7 +1,9 @@
 import logging
 from livekit.agents import RunContext, function_tool
 from livekit.agents.llm import ToolError
-from langchain_community.tools import DuckDuckGoSearchRun
+from importlib import import_module
+
+DuckDuckGoSearchRun = import_module("langchain_community.tools").DuckDuckGoSearchRun
 
 @function_tool()
 async def search_web(context: RunContext, query: str):
