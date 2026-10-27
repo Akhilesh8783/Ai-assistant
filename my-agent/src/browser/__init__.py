@@ -2,6 +2,8 @@
 
 from __future__ import annotations
 
-__all__ = ["__version__"]
+from .manager import BrowserError, BrowserManager
+
+__all__ = ["BrowserManager", "BrowserError"]
 
 __version__ = "1.0.0"
